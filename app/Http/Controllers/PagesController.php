@@ -3,27 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Teacher;
+use App\Models\Scode;
 
 class PagesController extends Controller
 {
     public function index(){
         return view('pages.index');
     }
+    public function about(){
+        return view('pages.about');
+    }
     public function profile(){
-        return view('pages.profile');
+
+        $data = ['LoggedUserInfo'=>Teacher::where('id','=',session('LoggedUser'))->first()];
+
+        return view('pages.profile', $data);
     }
-    public function login(){
-        return view('pages.login');
-    }
-    public function signup(){
-        return view('pages.signup');
-    }
-    public function adclass(){
-        return view('pages.adclass');
-    }
-    public function newadclass(){
-        return view('pages.newadclass');
+    public function signupcode(){
+
+        $scodes = Scode::all();
+
+        $data = ['LoggedUserInfo'=>Teacher::where('id','=',session('LoggedUser'))->first()];
+
+        return view('pages.signupcode', $data, ['scodes'=>$scodes]);
+
     }
 
-    
 }

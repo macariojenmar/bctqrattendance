@@ -4,14 +4,21 @@
     <div class="row gap-4 text-xs">
         <div class="col-md animate">
             <div>
-                <div class="row mb-2 mt-3">
-                    <div class="col-md-5">
-                        <img src="/images/add.svg" class="d-block mx-auto mb-3" style="width: 170px">
+                <div class="row align-items-center mb-3">
+                    <div class="col-md">
+                      <h5 class="fw-bold">New Advisory Class</h5>
+                      <h6 class="text-xs">Complete the information below to create new advisory class</h6>
                     </div>
-                    <div class="col-md" >
+                    <div class="col-md-5" >
                         
-                        <h1 class="fw-bold pt-3">New Advisory Class</h1>
-                        <h6 class="text-xs">Complete the information below to create new advisory class</h6>
+                      <div class="d-grid d-md-flex justify-content-md-end">
+                        <a href="/adclass">
+                          <button type="button" class="btn btn-link text-xs mt-3 mb-3" style="width: 100%">
+                            <svg class="me-1" style="fill: #0D6EFD" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>
+                            Go Back
+                          </button>
+                          </a>
+                        </div>
                         
                     </div>
                 </div>
@@ -31,7 +38,7 @@
                     </div>
                   @endif
 
-                <div class="container shadow-xs pt-5 pb-5 mb-3 bg-body rounded">
+                <div class="container shadow-xs pt-4 pe-2 ps-2 pb-2 mb-3 bg-body rounded">
 
                   
                   <form action="" method="POST">
@@ -152,22 +159,24 @@
                                 </div>
                             </div>
 
-                            <button type="submit" class="btn btn-primary text-xs fw-bold mt-3 pt-2 pb-2" id="save" style="width: 100%">
-                                Save
-                                <svg style="fill: white; margin-left: 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"></path></svg>
-                            </button>
+                          
 
-                            <a href="/adclass">
-                            <button type="button" class="btn btn-light text-xs fw-bold mt-2 pt-2 pb-2" id="save" style="width: 100%">
-                              Go back
-                            </button>
-                            </a>
+                         
                             </form>
                         </div>
                     </div>
-                  </form>
+                  
 
                 </div>
+
+                <div class="d-grid d-md-flex justify-content-md-end">
+
+                  <button type="submit" class="btn btn-primary text-xs fw-bold pt-2 pb-2 ps-4 pe-4" id="save" >
+                    Save
+                  </button>
+                </div>
+
+              </form>
             </div>
         </div>
         <div class="col-md-4">

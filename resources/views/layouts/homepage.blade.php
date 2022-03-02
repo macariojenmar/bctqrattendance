@@ -9,25 +9,18 @@
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-        <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet" type="text/css" >
+        <link href="{{ URL::asset('css/app1.css') }}" rel="stylesheet" type="text/css" >
 
     </header>
     <body class="text-font">
         @include('inc.navbarhomepage')
             
-            <div class="container animate" style="padding-left: 3em; padding-right: 3em; padding-top: 2em; padding-bottom: 3em">
+            <div class="container animateFast" style="padding-left: 3em; padding-right: 3em; padding-top: 2em; padding-bottom: 3em">
                 @yield('content')
             </div>
         @include('inc.footer')
 
     <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
-    
-    <script>
-        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-          return new bootstrap.Popover(popoverTriggerEl)
-        })
-    </script>
 
     </body>
 </html>

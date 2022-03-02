@@ -8,7 +8,7 @@
       <div class="modal-content p-2">
         <div class="modal-header">
           <h6 class="modal-title fw-bold" id="staticBackdropLabel"> 
-            Delete Checklist
+            Delete Class
           </h6>
           
         </div>
@@ -19,14 +19,14 @@
               <img src="/images/delete.svg" class="d-block mx-auto img-fluid">
             </div>
             <div class="col-md text-sm">
-              Are you sure you want to delete this checklist? This process cannot be undone.
+              Are you sure you want to delete this class? This process cannot be undone.
             </div>
           </div>
         
         </div>
         <div class="modal-footer">
           
-          <a href="{{ route('checklist.deletechecklist', $checklists->id)}}">
+          <a href="">
           <button type="button" class="btn btn-danger text-sm ps-3 pe-3">I understood, delete it anyway</button>
           </a>
 
@@ -41,62 +41,38 @@
 
    
 
-          <div class="row mb-4">
+          <div class="row mb-4 mt-2 align-items-center">
 
-            <div class="col-md pt-2" >
-                
-
-                <h6 class="text-xs text-color-gray pt-3">Checklist Title</h6>
-                <h1 class="fw-bold text-lg text-uppercase">
+            <div class="col-md" >
+              
+                <h2 class="fw-bold text-uppercase">
                   
-                  <span class="me-1">
-                  {{$checklists->grade}}
-                  </span>
+                Grade 11 - STEM
 
-                  {{$checklists->strand}} :
+                </h2>
 
-                  {{$checklists->title}}
-                </h1>
+                <h6 class="text-xs text-color-gray">Created at 2022-02-17 12:56:47</h6>
                 
-                <div class="row">
-                  <div class="col-md">
-                    <h6 class="text-xs text-color-gray pt-2">Schedule</h6>
-                    <h6 class="text-xs text-uppercase">
-                      <span class="me-1">
-                        {{$checklists->schedule}}
-                    </span>
-                    {{$checklists->start}} - 
-                    {{$checklists->end}}
-                    </h6>
-                  </div>
-                  <div class="col-md">
-                    <h6 class="text-xs text-color-gray pt-2">Late Timer</h6>
-                    <h6 class="text-xs">
-                      <span class="me-1">
-                      {{$checklists->late}}
-                      <span class="me-1">
-                        minutes
-                    </h6>
-                  </div>
-                </div>
 
                           
             </div>
-            <div class="col-md-4 pt-4">
+            <div class="col-md-4">
               
               <ul class="btn btn-primary text-xs p-0 navbar-nav ms-auto shadow-xs rounded border-0 mb-2">
                 <li class="nav-item dropdown ">
                     <a class="nav-link" href="#" data-bs-toggle="dropdown" style="color: white !important">
-                       <svg style="fill: white; margin-right: 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14" height="14"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM0 8a8 8 0 1116 0A8 8 0 010 8zm11.78-1.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"></path></svg>
-                      Check Attendance
+                      
+                      <svg style="fill: white; margin-right: 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14" height="14"><path fill-rule="evenodd" d="M13.25 2.5H2.75a.25.25 0 00-.25.25v10.5c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V2.75a.25.25 0 00-.25-.25zM2.75 1h10.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 15H2.75A1.75 1.75 0 011 13.25V2.75C1 1.784 1.784 1 2.75 1zM8 4a.75.75 0 01.75.75v2.5h2.5a.75.75 0 010 1.5h-2.5v2.5a.75.75 0 01-1.5 0v-2.5h-2.5a.75.75 0 010-1.5h2.5v-2.5A.75.75 0 018 4z"></path></svg>
+  
+                      Add students
                     </a>
 
                     <ul class="dropdown-menu shadow p-3 mb-1 mt-2 bg-body rounded border-0 text-xs" style="width: 100% !important">
                         
                         <li>
-                            <a class="dropdown-item border-bottom pt-3 pb-3" href="#">
-                              <svg style="fill: black; margin-right: 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14" height="14"><path fill-rule="evenodd" d="M1.75 1.5a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75zM0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm9.22 3.72a.75.75 0 000 1.06L10.69 8 9.22 9.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM6.78 6.53a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 101.06-1.06L5.31 8l1.47-1.47z"></path></svg>
-                              Generate QR Code
+                            <a class="dropdown-item border-bottom pt-3 pb-3" href="/addstudent">
+                              <svg style="fill: black; margin-right: 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14" height="14"><path fill-rule="evenodd" d="M13.25 0a.75.75 0 01.75.75V2h1.25a.75.75 0 010 1.5H14v1.25a.75.75 0 01-1.5 0V3.5h-1.25a.75.75 0 010-1.5h1.25V.75a.75.75 0 01.75-.75zM5.5 4a2 2 0 100 4 2 2 0 000-4zm2.4 4.548a3.5 3.5 0 10-4.799 0 5.527 5.527 0 00-3.1 4.66.75.75 0 101.498.085A4.01 4.01 0 015.5 9.5a4.01 4.01 0 014.001 3.793.75.75 0 101.498-.086 5.527 5.527 0 00-3.1-4.659z"></path></svg> 
+                              Input Student
                             </a>
                         </li>
                        
@@ -104,29 +80,16 @@
                         <li>
                        
                             <a class="dropdown-item border-bottom pt-3 pb-3">
-                              <svg style="fill: black; margin-right: 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14" height="14"><path d="M10.75 9a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5h-1.5z"></path><path fill-rule="evenodd" d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5zm14.5 0V5h-13V3.75a.25.25 0 01.25-.25h12.5a.25.25 0 01.25.25zm0 2.75h-13v5.75c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V6.5z"></path></svg>
-                              Scan Student QR Codes
+                              <svg style="fill: black; margin-right: 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14" height="14"><path fill-rule="evenodd" d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"></path></svg>  
+                              Upload Student List
                             </a>
                         </li>
-
-                        <li>
-                       
-                          <a class="dropdown-item border-bottom pt-3 pb-3">
-                            <svg style="fill: black; margin-right: 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14" height="14"><path fill-rule="evenodd" d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"></path></svg>  
-                            Upload Attendance
-                          </a>
-                      </li>
                         
                     </ul>
                 </li>
 
                
             </ul>
-
-                <button type="button" class="btn btn-light btn-gray text-xs border-0 mb-2 pt-2 pb-2" style="width: 100%">
-                  <svg style="fill: black; margin-right: 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="13" height="13"><path fill-rule="evenodd" d="M3.75 1.5a.25.25 0 00-.25.25v11.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25V6H9.75A1.75 1.75 0 018 4.25V1.5H3.75zm5.75.56v2.19c0 .138.112.25.25.25h2.19L9.5 2.06zM2 1.75C2 .784 2.784 0 3.75 0h5.086c.464 0 .909.184 1.237.513l3.414 3.414c.329.328.513.773.513 1.237v8.086A1.75 1.75 0 0112.25 15h-8.5A1.75 1.75 0 012 13.25V1.75z"></path></svg>
-                              Attendance Reports
-                </button>
                 
                 <ul class="btn btn-gray text-xs p-0 navbar-nav ms-auto shadow-xs rounded border-0">
                   <li class="nav-item dropdown ">
@@ -136,19 +99,10 @@
                       </a>
                       <ul class="dropdown-menu shadow p-3 mb-1 mt-2 bg-body rounded border-0 text-xs" style="width: 100% !important">
                           
-                        <li>
-                          <a class="dropdown-item pt-3 pb-3" href="#">
-                            <svg style="fill: black; margin-right: 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14" height="14"><path fill-rule="evenodd" d="M13.25 2.5H2.75a.25.25 0 00-.25.25v10.5c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V2.75a.25.25 0 00-.25-.25zM2.75 1h10.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 15H2.75A1.75 1.75 0 011 13.25V2.75C1 1.784 1.784 1 2.75 1zM8 4a.75.75 0 01.75.75v2.5h2.5a.75.75 0 010 1.5h-2.5v2.5a.75.75 0 01-1.5 0v-2.5h-2.5a.75.75 0 010-1.5h2.5v-2.5A.75.75 0 018 4z"></path></svg>
-  
-                            Add Students
-                          </a>
-                      </li>
-
-                        
                           <li>
                               <a class="dropdown-item border-bottom pt-3 pb-3" href="#">
                                 <svg style="fill: black; margin-right: 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14" height="14"><path fill-rule="evenodd" d="M11.013 1.427a1.75 1.75 0 012.474 0l1.086 1.086a1.75 1.75 0 010 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 01-.927-.928l.929-3.25a1.75 1.75 0 01.445-.758l8.61-8.61zm1.414 1.06a.25.25 0 00-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 000-.354l-1.086-1.086zM11.189 6.25L9.75 4.81l-6.286 6.287a.25.25 0 00-.064.108l-.558 1.953 1.953-.558a.249.249 0 00.108-.064l6.286-6.286z"></path></svg>
-                                  Edit Checklist
+                                  Edit Class Details
                               </a>
                           </li>
                          
@@ -157,7 +111,7 @@
                          
                               <a class="dropdown-item border-bottom pt-3 pb-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                 <svg style="fill: black; margin-right: 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="14" height="14"><path fill-rule="evenodd" d="M6.5 1.75a.25.25 0 01.25-.25h2.5a.25.25 0 01.25.25V3h-3V1.75zm4.5 0V3h2.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75zM4.496 6.675a.75.75 0 10-1.492.15l.66 6.6A1.75 1.75 0 005.405 15h5.19c.9 0 1.652-.681 1.741-1.576l.66-6.6a.75.75 0 00-1.492-.149l-.66 6.6a.25.25 0 01-.249.225h-5.19a.25.25 0 01-.249-.225l-.66-6.6z"></path></svg>
-                                  Delete Checklist
+                                  Delete Class
                               </a>
                           </li>
                           

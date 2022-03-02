@@ -4,44 +4,50 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Checklist;
+use App\Models\Teacher;
 
+use function GuzzleHttp\Promise\all;
 
 class ChecklistsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-
-        //return Checklist::all();
-
-        $checklists = Checklist::all();
+    public function user(){
         
-        return view('checklists.index')->with('checklists', $checklists);
-
+        $checklists = Checklist::orderBy('created_at', 'desc')->get();
+        
+        $data = ['LoggedUserInfo'=>Teacher::where('id','=',session('LoggedUser'))->first()];
+        
+        return view('checklists.user', $data, ['checklists'=>$checklists]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view('checklists.newchecklist');
+    public function showchecklist($id){
+        
+        $checklists = Checklist::find($id);
+        
+        $data = ['LoggedUserInfo'=>Teacher::where('id','=',session('LoggedUser'))->first()];
+
+        return view('checklists.showchecklist', $data, ['checklists'=>$checklists]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function newchecklist()
+    {  
+        $data = ['LoggedUserInfo'=>Teacher::where('id','=',session('LoggedUser'))->first()];
+
+        return view('checklists.newchecklist', $data);
+    }
+
+    public function deletechecklist($id)
+    {  
+
+        Checklist::where('id', $id)->delete();
+
+        return redirect('/user')->with('success', 'Checklist was successfully deleted');
+    }
+
+    public function savechecklist(Request $request)
     {
+
+        #return $request->input();
+
         $request->validate([
             'title' => 'required',
             'strand' => 'required',
@@ -52,56 +58,21 @@ class ChecklistsController extends Controller
             'end' => 'required',
         ]);
 
-        Checklist::create($request->all());
+       
+        $checklist = new Checklist();
 
-        return redirect()->route('checklists.index')
-                        ->with('success','Product created successfully.');
-                        
-    }
+        $checklist->title = $request->title;
+        $checklist->strand = $request->strand;
+        $checklist->schedule = $request->schedule;
+        $checklist->late = $request->late;
+        $checklist->grade = $request->grade;
+        $checklist->start = $request->start;
+        $checklist->end = $request->end;
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $checklists = Checklist::find($id);
-        return view('checklists.showchecklist')->with('checklists',$checklists);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        $save = $checklist->save();
+      
+        if($save){
+            return back()->with('success', 'New checklist has been created.');
+        }
     }
 }

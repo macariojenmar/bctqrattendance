@@ -5,8 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Checklist extends Model
+class Teacher extends Model
 {
-    protected $table = 'checklists';
-
+    protected $table = 'teachers';
 }

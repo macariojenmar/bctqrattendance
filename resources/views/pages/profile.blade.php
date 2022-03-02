@@ -2,16 +2,21 @@
 
 @section('content')
     <div class="row gap-4 text-xs">
+
+        <div class="col-md-1">
+        
+        </div>
+
         <div class="col-md animate">
-            <div class="row mb-4 mt-4">
+            <div class="row mb-4 mt-3 align-items-center">
                 <div class="col-md-3">
                     <img src="images/user.jpg" class="d-block mx-auto mb-3 rounded-circle" style="width: 140px">
                 </div>
                 <div class="col-md" >
                     
-                    <h6 class="text-xs pt-3">6001984</h6>
-                    <h1 class="fw-bold">Jane Doe</h1>
-                    <h6 class="text-xs">Adviser/Subject Teacher</h6>
+                    <h6 class="text-xs pt-3"> {{ $LoggedUserInfo['idnumber'] }}</h6>
+                    <h3 class="fw-bold text-capitalize"> {{ $LoggedUserInfo['name'] }}</h3>
+                    <h6 class="text-xs text-capitalize">{{ $LoggedUserInfo['type'] }}</h6>
                     
                 </div>
                 <div class="col-md pt-4">
@@ -36,7 +41,7 @@
                        
                     </div>
                     <div class="col-md">
-                        <h6 class="text-xs fw-bold ps-4 text-uppercase">Jane Jonas Doe</h6>
+                        <h6 class="text-xs fw-bold ps-4 text-uppercase">{{ $LoggedUserInfo['name'] }}</h6>
                     </div>
                 </div>
                 <div class="row pb-3">
@@ -45,25 +50,27 @@
                        
                     </div>
                     <div class="col-md">
-                        <h6 class="text-xs fw-bold ps-4 text-uppercase">6001984</h6>
+                        <h6 class="text-xs fw-bold ps-4 text-uppercase">{{ $LoggedUserInfo['idnumber'] }}</h6>
                     </div>
                 </div>
+
+                <div class="row pb-3">
+                    <div class="col-md-5">
+                        <h6 class="text-xs ps-4">Username</h6>
+                       
+                    </div>
+                    <div class="col-md">
+                        <h6 class="text-xs fw-bold ps-4">{{ $LoggedUserInfo['username'] }}</h6>
+                    </div>
+                </div>
+
                 <div class="row pb-3">
                     <div class="col-md-5">
                         <h6 class="text-xs ps-4">Account Type</h6>
                        
                     </div>
                     <div class="col-md">
-                        <h6 class="text-xs fw-bold ps-4 text-uppercase">Adviser/Subject Teacher</h6>
-                    </div>
-                </div>
-                <div class="row pb-3">
-                    <div class="col-md-5">
-                        <h6 class="text-xs ps-4">Gender</h6>
-                       
-                    </div>
-                    <div class="col-md">
-                        <h6 class="text-xs fw-bold ps-4 text-uppercase">Female</h6>
+                        <h6 class="text-xs fw-bold ps-4 text-uppercase">{{ $LoggedUserInfo['type'] }}</h6>
                     </div>
                 </div>
                 
@@ -74,7 +81,7 @@
                        
                     </div>
                     <div class="col-md">
-                        <h6 class="text-xs fw-bold ps-4 text-uppercase">0913781411</h6>
+                        <h6 class="text-xs fw-bold ps-4">Not yet added</h6>
                     </div>
                 </div>
                 <div class="row pb-3">
@@ -83,14 +90,14 @@
                        
                     </div>
                     <div class="col-md">
-                        <h6 class="text-xs fw-bold ps-4 ">janedoe@email.com</h6>
+                        <h6 class="text-xs fw-bold ps-4 ">{{ $LoggedUserInfo['email'] }}</h6>
                     </div>
                 </div>
             </div>
         </div>
       
-        <div class="col-md-4">
-            @include('inc.side')
+        <div class="col-md-1">
+        
         </div>
     </div>
 @endsection
