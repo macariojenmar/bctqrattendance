@@ -1,28 +1,12 @@
 <!-- Footer -->
 
-<footer class="text-center text-lg-start text-muted text-xs bg-light">
+<footer class="text-center text-lg-start text-xs background-image">
   <!-- Section: Links  -->
-  <section class="d-flex justify-content-center justify-content-lg-between p-4">
-    <div class="container text-center text-md-start mt-3 ">
+  <section class="d-flex justify-content-center justify-content-lg-between p-2 text-white">
+    <div class="container text-center text-md-start mt-3 "  style="color: white">
       <!-- Grid row -->
       <div class="row mt-3">
         <!-- Grid column -->
-
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase text-sm fw-bold mb-4">
-            Explore
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Home</a>
-          </p>
-          <p>
-            <a class="text-reset">Dashboard</a>
-          </p>
-          <p>
-            <a class="text-reset">Dropped</a>
-          </p>
-        </div>
 
         <!-- Grid column -->
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -49,10 +33,10 @@
             Visit Us
           </h6>
           <p>
-            <a href="#!" class="text-reset">https://bct.edu.ph/</a>
+            <a href="https://bct.edu.ph/" target="_blank" class="text-reset">bct.edu.ph</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">#37 Harrison Road, Baguio City</a>
+            <a class="text-reset">#37 Harrison Road, Baguio City</a>
           </p>
           
         </div>
@@ -66,7 +50,7 @@
             Follow us
           </h6>
           <p>
-              <a class="text-reset">Facebook Baguio College of Technology</a>
+              <a href="https://www.facebook.com/bct.edu.ph/" target="_blank" class="text-reset">Facebook Baguio College of Technology</a>
             </p>
         </div>
         <!-- Grid column -->
@@ -77,9 +61,9 @@
   <!-- Section: Links  -->
   
   <!-- Copyright -->
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2021 Copyright:
-    <a class="text-reset fw-bold">bct.edu.ph</a>
+  <div class="text-center p-2 bg-black" style="color: white">
+    © 2021 Copyright
+    <a href="https://bct.edu.ph/" target="_blank" class="fw-bold" style="color: white !important">bct.edu.ph</a>
   </div>
   <!-- Copyright -->
   

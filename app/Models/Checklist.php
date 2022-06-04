@@ -9,4 +9,8 @@ class Checklist extends Model
 {
     protected $table = 'checklists';
 
+    protected $fillable = [
+        'schedule'
+    ];
+
 }

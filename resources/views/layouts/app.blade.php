@@ -5,28 +5,41 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" media='all' rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-        <link href="{{ URL::asset('css/app1.css') }}" rel="stylesheet" type="text/css" >
+        <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet" type="text/css" media='all'>
 
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+
+        <script type="text/javascript" src="{{ URL::asset('js/html5-qrcode.min.js') }}"></script>
+        
+        
+        
     </header>
     <body class="text-font">
-
         
         @include('inc.navbar')
             
     <div id="data"></div>
 
-            <div class="container" style="padding-left: 3em; padding-right: 3em; padding-top: 2em; padding-bottom: 3em">
+            
+            @include('inc.message')
+
+            <div class="container pt-3" style="padding-left: 2em; padding-right: 2em;">
                 
                 @yield('content')
 
-            </div>
-        @include('inc.footer')
+                @yield('scripts')
 
-    <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
+            </div>
         
+            
+    <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
+    
+    
+            
     </body>
 </html>

@@ -1,5 +1,6 @@
 require('./bootstrap');
 
+
 function showPass() {
     var x = document.getElementById("password");
     if (x.type === "password") {
@@ -16,19 +17,6 @@ myModal.addEventListener('shown.bs.modal', function () {
   myInput.focus()
 })
 
-
-function generate(){
-    var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var codeLength = 8;
-    var code = "";
-
-    for (var i=0; i<codeLength; i++) {
-        var randomNumber = Math.floor(Math.random()*chars.length);
-        code += chars.substring(randomNumber, randomNumber+1);
-    }
-    document.getElementById("code").value = code;
-}
-
 function copyCode() {
 
     let input = document.querySelector('#code');
@@ -36,5 +24,46 @@ function copyCode() {
 
     document.execCommand("copy");
     
-
 }
+
+function searchStudent() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("studentInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("studentTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[1];
+        if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+        } else {
+            tr[i].style.display = "none";
+        }
+        }       
+    }
+    }
+
+    
+    
+    const ctx = document.getElementById("chartHome").getContext('2d');
+      const myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: ["rice", "yam", "tomato", "potato",
+          "beans", "maize", "oil"],
+          datasets: [{
+            label: 'food Items',
+            backgroundColor: 'rgba(161, 198, 247, 1)',
+            borderColor: 'rgb(47, 128, 237)',
+            data: [30, 40, 20, 50, 80, 90, 20],
+          }]
+        },
+      });
+
+      function test(){
+        console.log("Fuck");
+    }
+
+     

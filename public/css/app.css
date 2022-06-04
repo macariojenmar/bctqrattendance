@@ -1,0 +1,249 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap');
+
+body {
+   
+    background-color: #f5f5f5;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.text-white{
+    color: #1F1F1F !important;
+}
+.bg-color-black {
+    background-color: #1F1F1F;
+}
+.bg-color-blue{
+    
+    background-color: #0099ff;
+}
+.text-color-gray{
+    color: #A1A1A1;
+}
+.text-primary {
+    color: #247c95 !important;
+}
+
+.animate {
+    animation: transitionIn 1s;
+}
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+.animateFast {
+    animation: transitionFast 0.5s;
+}
+
+@keyframes transitionFast {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+.text-xs {
+    font-size: 13px;
+}
+.text-sm {
+    font-size: 14px; 
+}
+.text-lg {
+    font-size: 16px; 
+}
+.btn-light{
+    background-color: #E2E2E2 !important;
+}
+.btn-gray{
+    background-color: #E0E0E0 !important;
+}
+a {
+    color: #1F1F1F !important;
+    text-decoration: none !important;
+}
+.btn-link{
+    text-decoration: none !important;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.div-hover:hover {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);   
+     transition: 0.3s;
+     cursor: pointer;
+}
+
+
+.tooltip.show {
+    opacity: 1;
+    
+  }
+  
+  .tooltip-inner {
+    background-color: white;
+    opacity: 1 !important;
+    color: #575757;
+    font-size: 13px;
+    padding: 1em;
+    border: none !important;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);   
+    
+  }
+
+  .tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+
+    border-bottom-color: white !important;
+
+    
+  }
+.btn-danger, .bg-danger {
+    background-color: #EC7063 !important;
+    border: 0 !important; 
+}
+
+.text-danger {
+    color: #EC7063 !important;
+}
+
+.btn-success, .bg-success {
+    background-color: #2ECC71 !important;
+    border: 0 !important; 
+}
+
+.btn-primary, .bg-primary {
+    background-color: #155263 !important;
+    border: 0 !important; 
+}
+
+.check {
+    background-color: white !important;
+    color: #EC7063 !important;
+    border: 2px solid #EC7063 !important;
+}
+
+.table-subject {
+    width: 100%;
+    
+    display:block;
+}
+
+.tbody-subject {
+    height: 380px;
+    display: inline-block;
+    width: 100%;
+    padding-left: 5px;
+    overflow: auto;
+}
+
+.btn-outline-primary {
+
+    color: black;
+    font-size: 13px;
+}
+.bg-light {
+    background-color: #F2F3F4 !important;
+}
+
+.background-image {
+    background: linear-gradient(40deg, #155263 9%, #155263 43%, #FF6F3C calc(43% + 1px), #FF6F3C 52%, #FF9A3C calc(52% + 1px), #FF9A3C 80%, #FFC93C calc(80% + 1px), #FFC93C 100%);
+}
+
+.bg-black {
+    background-color: #ffffff;
+    color:  #2a2a2a !important;
+    border: 2px solid #e4e4e4;
+    
+}
+
+.bg-black:focus{
+    
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+    transition: 0.5s;
+    color: black !important;
+    background-color: white;
+    font-weight: bold !important;
+    
+}
+
+.remove-focus:focus{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+
+.fw-bold{
+    letter-spacing: .5px; 
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    transition: 0.5s;
+    background-color: #155263 !important;
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width:800px) {
+    #no-more-tables tbody,
+    #no-more-tables tr,
+    #no-more-tables td {
+        display: block;
+    }
+    #no-more-tables thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        
+    }
+    #no-more-tables td {
+        position: relative;
+        padding-left: 50%;
+        border: none;
+
+    }
+    #no-more-tables td:before {
+        content: attr(data-title);
+        position: absolute;
+        left: 6px;
+        font-weight: bold;
+    }
+    #no-more-tables tr {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #A1A1A1;
+        
+    }
+}
+/*
+
+.g-recaptcha{
+    transform:scale(0.79);
+    -webkit-transform:scale(0.79);
+    transform-origin:0 0;
+    -webkit-transform-origin:0 0;
+}
+
+*/
+
